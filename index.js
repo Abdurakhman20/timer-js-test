@@ -7,6 +7,7 @@ const timerEl = document.querySelector("span");
 const createTimerAnimator = () => {
   let interval;
   return (seconds) => {
+    if (!seconds) return;
     if (interval) return;
     interval = setInterval(() => {
       seconds--;
